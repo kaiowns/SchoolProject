@@ -66,20 +66,29 @@
       margin-bottom: 10px;
       color: #e94f37;
     }
-    .card h3 {
-      font-size: 1.4rem;
-      margin-top: 25px;
-      color: #537780;
-    }
-    .card p, .card ul {
+    .topic-btn {
+      background-color: #ffb347;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      margin: 10px 5px;
       font-size: 1rem;
-      line-height: 1.8;
-      margin-top: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
     }
-    .card ul li {
-      margin-left: 20px;
+    .topic-btn:hover {
+      background-color: #ff9e2c;
     }
-    img {
+    .topic {
+      display: none;
+      margin-top: 20px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    .topic.active {
+      display: block;
+    }
+    .card img {
       width: 100%;
       border-radius: 15px;
       margin-top: 25px;
@@ -109,57 +118,53 @@
   </div>  <div class="page" id="islam">
     <div class="card" data-aos="zoom-in">
       <h2>☪️ Islam</h2>
-      <p>Islam is practiced by over a billion people. The name itself means peace and submission—to the will of Allah, the one and only God in Islam.</p>
-      <h3>Belief in God</h3>
-      <p>Muslims believe Allah is merciful, powerful, and beyond human form. He is the center of life and worship.</p>
-      <h3>The Quran</h3>
-      <p>The Quran is the sacred book of Islam, believed to be the direct words of Allah revealed to the Prophet Muhammad.</p>
-      <h3>Practices</h3>
-      <p>Praying five times a day, fasting in Ramadan, and giving to charity are just a few ways Muslims live out their faith.</p>
-      <h3>Forgiveness</h3>
-      <p>Forgiveness is a central value. Allah is known as the Most Forgiving, and Muslims are encouraged to forgive others too.</p>
+      <button class="topic-btn" onclick="toggleTopic(this)">Belief in God</button>
+      <div class="topic"><p>Muslims believe Allah is merciful, powerful, and beyond human form. He is the center of life and worship.</p></div>
+      <button class="topic-btn" onclick="toggleTopic(this)">The Quran</button>
+      <div class="topic"><p>The Quran is the sacred book of Islam, believed to be the direct words of Allah revealed to the Prophet Muhammad.</p></div>
+      <button class="topic-btn" onclick="toggleTopic(this)">Practices</button>
+      <div class="topic"><p>Praying five times a day, fasting in Ramadan, and giving to charity are just a few ways Muslims live out their faith.</p></div>
+      <button class="topic-btn" onclick="toggleTopic(this)">Forgiveness</button>
+      <div class="topic"><p>Forgiveness is a central value. Allah is known as the Most Forgiving, and Muslims are encouraged to forgive others too.</p></div>
       <img src="https://images.unsplash.com/photo-1573508289400-108d3a616c64" alt="Islamic art">
     </div>
   </div>  <div class="page" id="christianity">
     <div class="card" data-aos="zoom-in">
       <h2>✝️ Christianity</h2>
-      <p>Christianity follows the teachings of Jesus Christ. It’s all about love, grace, and hope through God.</p>
-      <h3>Belief in God</h3>
-      <p>God is loving and present as the Father, Son, and Holy Spirit. Christians believe Jesus is the Savior.</p>
-      <h3>The Bible</h3>
-      <p>The Bible is a collection of ancient writings that tell the story of God’s love and the life of Jesus.</p>
-      <h3>Practices</h3>
-      <p>Sunday worship, prayer, singing, and helping others are common. Celebrating Easter and Christmas are major traditions.</p>
-      <h3>Forgiveness</h3>
-      <p>Forgiveness is everything. Christians are taught to forgive others just like God forgives them.</p>
+      <button class="topic-btn" onclick="toggleTopic(this)">Belief in God</button>
+      <div class="topic"><p>God is loving and present as the Father, Son, and Holy Spirit. Christians believe Jesus is the Savior.</p></div>
+      <button class="topic-btn" onclick="toggleTopic(this)">The Bible</button>
+      <div class="topic"><p>The Bible is a collection of ancient writings that tell the story of God’s love and the life of Jesus.</p></div>
+      <button class="topic-btn" onclick="toggleTopic(this)">Practices</button>
+      <div class="topic"><p>Sunday worship, prayer, singing, and helping others are common. Celebrating Easter and Christmas are major traditions.</p></div>
+      <button class="topic-btn" onclick="toggleTopic(this)">Forgiveness</button>
+      <div class="topic"><p>Forgiveness is everything. Christians are taught to forgive others just like God forgives them.</p></div>
       <img src="https://images.unsplash.com/photo-1504309099468-86ef8e5082d6" alt="Church">
     </div>
   </div>  <div class="page" id="buddhism">
     <div class="card" data-aos="zoom-in">
       <h2>🪷 Buddhism</h2>
-      <p>Buddhism is about inner peace, mindfulness, and ending suffering through wisdom and compassion.</p>
-      <h3>Belief in God</h3>
-      <p>Buddhism doesn’t focus on a creator god. Instead, it teaches self-enlightenment through understanding.</p>
-      <h3>Texts</h3>
-      <p>The Tripitaka and other sutras guide Buddhists on how to live wisely and peacefully.</p>
-      <h3>Practices</h3>
-      <p>Meditation, kindness, and balance are key. The Eightfold Path helps followers live a good life.</p>
-      <h3>Forgiveness</h3>
-      <p>Letting go of anger is essential. Forgiveness brings calm to both heart and mind.</p>
+      <button class="topic-btn" onclick="toggleTopic(this)">Belief in God</button>
+      <div class="topic"><p>Buddhism doesn’t focus on a creator god. Instead, it teaches self-enlightenment through understanding.</p></div>
+      <button class="topic-btn" onclick="toggleTopic(this)">Texts</button>
+      <div class="topic"><p>The Tripitaka and other sutras guide Buddhists on how to live wisely and peacefully.</p></div>
+      <button class="topic-btn" onclick="toggleTopic(this)">Practices</button>
+      <div class="topic"><p>Meditation, kindness, and balance are key. The Eightfold Path helps followers live a good life.</p></div>
+      <button class="topic-btn" onclick="toggleTopic(this)">Forgiveness</button>
+      <div class="topic"><p>Letting go of anger is essential. Forgiveness brings calm to both heart and mind.</p></div>
       <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d" alt="Buddhist monk">
     </div>
   </div>  <div class="page" id="judaism">
     <div class="card" data-aos="zoom-in">
       <h2>✡️ Judaism</h2>
-      <p>Judaism is rich with history, tradition, and a strong sense of community. It centers on a relationship with God and shared identity.</p>
-      <h3>Belief in God</h3>
-      <p>Jews believe in one just and caring God who made a covenant with the Jewish people.</p>
-      <h3>The Torah</h3>
-      <p>The Torah teaches moral laws and stories of early Jewish life. It’s read weekly in synagogue and respected deeply.</p>
-      <h3>Practices</h3>
-      <p>Shabbat, kosher food, bar/bat mitzvahs, and holidays like Passover are important parts of Jewish life.</p>
-      <h3>Forgiveness</h3>
-      <p>Before Yom Kippur, Jews seek and offer forgiveness to cleanse the soul and start fresh.</p>
+      <button class="topic-btn" onclick="toggleTopic(this)">Belief in God</button>
+      <div class="topic"><p>Jews believe in one just and caring God who made a covenant with the Jewish people.</p></div>
+      <button class="topic-btn" onclick="toggleTopic(this)">The Torah</button>
+      <div class="topic"><p>The Torah teaches moral laws and stories of early Jewish life. It’s read weekly in synagogue and respected deeply.</p></div>
+      <button class="topic-btn" onclick="toggleTopic(this)">Practices</button>
+      <div class="topic"><p>Shabbat, kosher food, bar/bat mitzvahs, and holidays like Passover are important parts of Jewish life.</p></div>
+      <button class="topic-btn" onclick="toggleTopic(this)">Forgiveness</button>
+      <div class="topic"><p>Before Yom Kippur, Jews seek and offer forgiveness to cleanse the soul and start fresh.</p></div>
       <img src="https://images.unsplash.com/photo-1579584425555-c3ce17d7b6e6" alt="Jewish celebration">
     </div>
   </div>  <div class="page" id="conclusion">
@@ -176,5 +181,10 @@
       document.getElementById(pageId).classList.add('active');
       window.scrollTo(0, 0);
     }
+
+    function toggleTopic(button) {
+      const topic = button.nextElementSibling;
+      topic.classList.toggle('active');
+    }
   </script></body>
-      </html>
+        </html>
