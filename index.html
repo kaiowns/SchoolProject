@@ -1,176 +1,180 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exploring Religions - An Interactive Journey</title>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Religion Explorer</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    body {
-      font-family: 'Comfortaa', cursive;
-      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    html, body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #d0f0fd, #ffe2e2);
+      overflow-x: hidden;
       color: #333;
-      scroll-behavior: smooth;
     }
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(255, 126, 126, 0.9);
-      text-align: center;
-      z-index: 999;
+      background: #7ec8e3;
       padding: 15px 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
     nav a {
-      margin: 0 15px;
-      color: white;
+      color: #fff;
+      margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1.1rem;
       transition: 0.3s;
     }
     nav a:hover {
       color: #222;
     }
-    header {
-      background: #ffd6a5;
-      text-align: center;
-      padding: 120px 20px 60px;
+    .page {
+      display: none;
+      padding: 100px 20px 50px;
+      animation: fadeIn 1s ease-in-out;
     }
-    header h1 {
-      font-size: 3rem;
-      color: #6a0572;
+    .page.active {
+      display: block;
     }
-    header p {
-      font-size: 1.3rem;
-      margin-top: 10px;
-      color: #222;
-    }
-    section {
-      padding: 100px 20px;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     .card {
-      background: #fff;
-      border-radius: 20px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.1);
       max-width: 900px;
       margin: 40px auto;
-      padding: 40px;
+      background: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
       transition: transform 0.3s;
     }
     .card:hover {
-      transform: scale(1.01);
+      transform: translateY(-5px);
     }
     .card h2 {
-      color: #ff5e78;
+      font-size: 2rem;
       margin-bottom: 10px;
+      color: #e94f37;
     }
     .card h3 {
-      color: #564787;
-      margin-top: 30px;
+      font-size: 1.4rem;
+      margin-top: 25px;
+      color: #537780;
     }
     .card p, .card ul {
-      margin-top: 10px;
+      font-size: 1rem;
       line-height: 1.8;
+      margin-top: 10px;
     }
-    ul li {
+    .card ul li {
       margin-left: 20px;
     }
     img {
       width: 100%;
       border-radius: 15px;
-      margin: 30px 0;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      margin-top: 25px;
+    }
+    .footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 1.1rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="#intro">Intro</a>
-    <a href="#islam">Islam</a>
-    <a href="#christianity">Christianity</a>
-    <a href="#buddhism">Buddhism</a>
-    <a href="#judaism">Judaism</a>
-    <a href="#conclusion">Wrap Up</a>
-  </nav>  <header data-aos="fade-down">
-    <h1>Discovering Religions Together</h1>
-    <p>A colorful journey through the beliefs that shape billions of lives</p>
-  </header>  <section id="intro">
+    <a href="#" onclick="showPage('intro')">Intro</a>
+    <a href="#" onclick="showPage('islam')">Islam</a>
+    <a href="#" onclick="showPage('christianity')">Christianity</a>
+    <a href="#" onclick="showPage('buddhism')">Buddhism</a>
+    <a href="#" onclick="showPage('judaism')">Judaism</a>
+    <a href="#" onclick="showPage('conclusion')">Conclusion</a>
+  </nav>  <div class="page active" id="intro">
     <div class="card" data-aos="fade-up">
-      <h2>Welcome to Our Journey</h2>
-      <p>Religion has been part of human life for thousands of years. Whether it's finding purpose, understanding the universe, or building a sense of community, people everywhere have looked to religion for guidance. In this project, we explore four of the world's major religions and how they approach life, belief, forgiveness, and daily rituals. It’s not about comparing who's right—just learning how beautifully diverse humans can be.</p>
-      <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7" alt="World religions">
+      <h2>🌍 Let's Explore Religious Diversity</h2>
+      <p>Religion has been part of humanity for thousands of years. It's about beliefs, connection, forgiveness, rituals, and the way we understand the universe. Let’s discover how Islam, Christianity, Buddhism, and Judaism express those ideas differently yet meaningfully.</p>
+      <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7" alt="Diverse hands together">
     </div>
-  </section>  <section id="islam">
-    <div class="card" data-aos="zoom-in-up">
-      <h2>Islam</h2>
-      <p>Islam is followed by over a billion people around the world. The word "Islam" means peace and submission—submission to the one and only God, Allah.</p>
-      <h3>What do Muslims believe about God?</h3>
-      <p>Allah is the one true God. Muslims believe He’s compassionate, all-knowing, and always near. No images or statues represent Him—just words and faith.</p>
+  </div>  <div class="page" id="islam">
+    <div class="card" data-aos="zoom-in">
+      <h2>☪️ Islam</h2>
+      <p>Islam is practiced by over a billion people. The name itself means peace and submission—to the will of Allah, the one and only God in Islam.</p>
+      <h3>Belief in God</h3>
+      <p>Muslims believe Allah is merciful, powerful, and beyond human form. He is the center of life and worship.</p>
       <h3>The Quran</h3>
-      <p>The Quran is Islam’s holy book. It's seen as the literal word of God revealed to the Prophet Muhammad. It guides everything from prayer to daily decisions.</p>
-      <h3>How Muslims Practice</h3>
-      <p>From praying five times a day to fasting during Ramadan, Islamic life is centered around worship, charity, and kindness. The pilgrimage to Mecca is a spiritual goal for all Muslims.</p>
-      <h3>Forgiveness in Islam</h3>
-      <p>Muslims believe God loves to forgive. People are encouraged to admit mistakes, ask for forgiveness, and try to do better.</p>
+      <p>The Quran is the sacred book of Islam, believed to be the direct words of Allah revealed to the Prophet Muhammad.</p>
+      <h3>Practices</h3>
+      <p>Praying five times a day, fasting in Ramadan, and giving to charity are just a few ways Muslims live out their faith.</p>
+      <h3>Forgiveness</h3>
+      <p>Forgiveness is a central value. Allah is known as the Most Forgiving, and Muslims are encouraged to forgive others too.</p>
       <img src="https://images.unsplash.com/photo-1573508289400-108d3a616c64" alt="Islamic art">
     </div>
-  </section>  <section id="christianity">
-    <div class="card" data-aos="fade-right">
-      <h2>Christianity</h2>
-      <p>Christianity is based on the life and teachings of Jesus Christ. Christians believe Jesus is the Son of God who came to bring salvation to everyone.</p>
+  </div>  <div class="page" id="christianity">
+    <div class="card" data-aos="zoom-in">
+      <h2>✝️ Christianity</h2>
+      <p>Christianity follows the teachings of Jesus Christ. It’s all about love, grace, and hope through God.</p>
       <h3>Belief in God</h3>
-      <p>Christians believe in one God expressed as the Father, the Son (Jesus), and the Holy Spirit. The message is clear: God is love.</p>
+      <p>God is loving and present as the Father, Son, and Holy Spirit. Christians believe Jesus is the Savior.</p>
       <h3>The Bible</h3>
-      <p>The Bible is a collection of books—stories, poetry, wisdom—that tell the journey of God's people and the life of Jesus.</p>
-      <h3>Christian Practice</h3>
-      <p>Church services, prayer, singing, and acts of kindness are common practices. Special days like Christmas and Easter celebrate key moments in Jesus' life.</p>
-      <h3>Forgiveness in Christianity</h3>
-      <p>Forgiveness is at the heart of Christian belief. Jesus taught people to forgive others as God forgives them—with love and grace.</p>
-      <img src="https://images.unsplash.com/photo-1504309099468-86ef8e5082d6" alt="Church interior">
+      <p>The Bible is a collection of ancient writings that tell the story of God’s love and the life of Jesus.</p>
+      <h3>Practices</h3>
+      <p>Sunday worship, prayer, singing, and helping others are common. Celebrating Easter and Christmas are major traditions.</p>
+      <h3>Forgiveness</h3>
+      <p>Forgiveness is everything. Christians are taught to forgive others just like God forgives them.</p>
+      <img src="https://images.unsplash.com/photo-1504309099468-86ef8e5082d6" alt="Church">
     </div>
-  </section>  <section id="buddhism">
-    <div class="card" data-aos="fade-left">
-      <h2>Buddhism</h2>
-      <p>Buddhism is more of a way of life than a religion. It’s about understanding suffering, letting go of selfishness, and becoming truly aware of the world.</p>
-      <h3>Is there a God in Buddhism?</h3>
-      <p>Not really. Buddhists focus on spiritual growth and personal wisdom instead of worshipping a creator god.</p>
-      <h3>Buddhist Texts</h3>
-      <p>The teachings of the Buddha are recorded in many books, like the Tripitaka. These texts offer guidance for meditation and ethical living.</p>
-      <h3>Daily Life for Buddhists</h3>
-      <p>Buddhists meditate, reflect, and practice compassion. They avoid harming others and aim for balance in everything they do.</p>
-      <h3>Forgiveness in Buddhism</h3>
-      <p>Letting go of anger and resentment is key to inner peace. Forgiveness is a gift you give to yourself as much as to others.</p>
+  </div>  <div class="page" id="buddhism">
+    <div class="card" data-aos="zoom-in">
+      <h2>🪷 Buddhism</h2>
+      <p>Buddhism is about inner peace, mindfulness, and ending suffering through wisdom and compassion.</p>
+      <h3>Belief in God</h3>
+      <p>Buddhism doesn’t focus on a creator god. Instead, it teaches self-enlightenment through understanding.</p>
+      <h3>Texts</h3>
+      <p>The Tripitaka and other sutras guide Buddhists on how to live wisely and peacefully.</p>
+      <h3>Practices</h3>
+      <p>Meditation, kindness, and balance are key. The Eightfold Path helps followers live a good life.</p>
+      <h3>Forgiveness</h3>
+      <p>Letting go of anger is essential. Forgiveness brings calm to both heart and mind.</p>
       <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d" alt="Buddhist monk">
     </div>
-  </section>  <section id="judaism">
+  </div>  <div class="page" id="judaism">
     <div class="card" data-aos="zoom-in">
-      <h2>Judaism</h2>
-      <p>Judaism is one of the oldest religions still practiced today. It’s a faith rooted in tradition, law, and a deep sense of history and community.</p>
-      <h3>What do Jews believe about God?</h3>
-      <p>Jews believe in one God who is both just and loving. This God made a promise—a covenant—with the Jewish people to guide and protect them.</p>
+      <h2>✡️ Judaism</h2>
+      <p>Judaism is rich with history, tradition, and a strong sense of community. It centers on a relationship with God and shared identity.</p>
+      <h3>Belief in God</h3>
+      <p>Jews believe in one just and caring God who made a covenant with the Jewish people.</p>
       <h3>The Torah</h3>
-      <p>The Torah contains laws, stories, and instructions for how to live a meaningful life. It’s read weekly in synagogue and studied with care.</p>
-      <h3>Practices and Traditions</h3>
-      <p>Jewish life includes holidays like Passover, weekly rest on the Sabbath, and special foods prepared in a kosher way. It’s about remembering and honoring the past.</p>
-      <h3>Forgiveness in Judaism</h3>
-      <p>Before Yom Kippur, Jews seek forgiveness from others and from God. It’s not just about words—it’s about making things right.</p>
+      <p>The Torah teaches moral laws and stories of early Jewish life. It’s read weekly in synagogue and respected deeply.</p>
+      <h3>Practices</h3>
+      <p>Shabbat, kosher food, bar/bat mitzvahs, and holidays like Passover are important parts of Jewish life.</p>
+      <h3>Forgiveness</h3>
+      <p>Before Yom Kippur, Jews seek and offer forgiveness to cleanse the soul and start fresh.</p>
       <img src="https://images.unsplash.com/photo-1579584425555-c3ce17d7b6e6" alt="Jewish celebration">
     </div>
-  </section>  <section id="conclusion">
+  </div>  <div class="page" id="conclusion">
     <div class="card" data-aos="fade-up">
-      <h2>What We Learned</h2>
-      <p>Whether it's praying, meditating, lighting candles, or studying sacred books, people all over the world are trying to answer the same big questions. What's right and wrong? Why are we here? How do we live a good life? Religion is one way humans express those answers—and learning about them helps us understand each other just a little better.</p>
+      <h2>🎓 Wrapping Up</h2>
+      <p>Every religion brings a different piece to the human puzzle. Through belief, tradition, and reflection, people around the world find meaning and connection. Learning about each other isn’t just interesting—it’s powerful.</p>
     </div>
-  </section>  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
+    <div class="footer">© 2025 Religion Explorer Project</div>
+  </div>  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    function showPage(pageId) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+      window.scrollTo(0, 0);
+    }
   </script></body>
-  </html>
+      </html>
