@@ -2,211 +2,212 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diversity in Religion - Interactive Showcase</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Diversity in Religion - Colorful Presentation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    html, body {
+    * {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f9f871, #fbc2eb);
+      color: #333;
       scroll-behavior: smooth;
-      background: linear-gradient(to right, #1e1e2f, #2a2a3e);
-      color: #f5f5f5;
+    }
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: #ff8fa3;
+      padding: 10px 0;
+      text-align: center;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      font-weight: bold;
+      margin: 0 15px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #222;
+    }
+    header {
+      background: #ffd6a5;
+      padding: 100px 20px 60px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #5f0f40;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.3rem;
+      color: #222;
     }
     section {
       padding: 80px 20px;
-      min-height: 100vh;
-      transition: all 0.5s ease;
+      animation: fadeSlide 1s ease-in-out;
     }
-    header {
-      background: linear-gradient(to right, #511f7c, #7a2ca7);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-      font-family: 'Orbitron', sans-serif;
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    header h1 {
-      font-size: 3em;
-      margin: 0;
-    }
-    header p {
-      font-size: 1.2em;
-      margin-top: 10px;
-    }
-    .topic {
-      background: rgba(255, 255, 255, 0.05);
-      margin: 40px auto;
-      max-width: 1000px;
+    .card {
+      background: white;
+      max-width: 900px;
+      margin: 30px auto;
       border-radius: 20px;
-      padding: 40px;
-      box-shadow: 0 0 30px rgba(0,0,0,0.5);
-      backdrop-filter: blur(10px);
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
     }
-    .religion {
-      margin-top: 30px;
-      border-top: 1px dashed #888;
-      padding-top: 20px;
+    .card:hover {
+      transform: translateY(-10px);
     }
-    h1, h2, h3 {
-      color: #f9c74f;
+    .card h2 {
+      color: #e63946;
+    }
+    .card h3 {
+      color: #1d3557;
+      margin-top: 20px;
+    }
+    .card p, .card ul {
+      color: #333;
+      line-height: 1.7;
+      margin-top: 10px;
     }
     img {
       width: 100%;
       border-radius: 12px;
-      margin-top: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
-    }
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(30, 30, 48, 0.9);
-      z-index: 999;
-      display: flex;
-      justify-content: center;
-      backdrop-filter: blur(5px);
-    }
-    nav a {
-      color: #f9c74f;
-      text-decoration: none;
-      padding: 15px 25px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      background: #f9c74f;
-      color: #222;
-      border-radius: 10px;
-    }
-    .fade-in {
-      animation: fadeIn 1.2s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(50px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    ul {
-      line-height: 1.8;
-    }
-    .rainbow-text {
-      background-image: linear-gradient(45deg, #ff416c, #ff4b2b, #f9c74f, #43cea2, #185a9d);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      margin: 20px 0;
     }
   </style>
 </head>
-<body>
-  <nav>
+<body>  <nav>
     <a href="#intro">Intro</a>
-    <a href="#concept">God</a>
-    <a href="#texts">Texts</a>
-    <a href="#practices">Practices</a>
-    <a href="#forgiveness">Forgiveness</a>
-    <a href="#roles">Society</a>
-    <a href="#learning">Learning</a>
-  </nav>
-  <header>
-    <h1 class="rainbow-text">Diversity in Religion</h1>
-    <p>A dynamic journey through Islam, Christianity, Buddhism, and Judaism</p>
-  </header>  <section id="intro" class="fade-in">
-    <div class="topic">
-      <h2>🌍 Introduction to Diversity</h2>
-      <p>Across the globe, billions of people follow spiritual paths that guide their lives, relationships, and understanding of existence. These religions—though diverse in expression—offer shared values such as compassion, forgiveness, and purpose. Through this creative showcase, explore the brilliance and uniqueness of four major world religions and gain insight into how they shape humanity’s moral and cultural fabric.</p>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Religious_symbols.svg" alt="Religious Symbols">
+    <a href="#islam">Islam</a>
+    <a href="#christianity">Christianity</a>
+    <a href="#buddhism">Buddhism</a>
+    <a href="#judaism">Judaism</a>
+    <a href="#conclusion">Conclusion</a>
+  </nav>  <header>
+    <h1>🌈 Religion: A Colorful World of Beliefs</h1>
+    <p>Explore the uniqueness of four major world religions through this interactive presentation.</p>
+  </header>  <section id="intro">
+    <div class="card">
+      <h2>🌍 Introduction to Religious Diversity</h2>
+      <p>Religions provide answers to humanity’s biggest questions: why we’re here, what happens after we die, how we should live. Despite differences, they share common goals—promoting values, moral guidelines, and community. This project explores four major religions: Islam, Christianity, Buddhism, and Judaism, each with their own traditions, sacred texts, and understanding of divinity.</p>
+      <img src="https://i.imgur.com/nFr8Eyo.jpeg" alt="Religious Diversity">
     </div>
-  </section>  <section id="concept" class="fade-in">
-    <div class="topic">
-      <h2>🔱 1. Concept of God</h2>
-      <div class="religion">
-        <h3>Islam</h3>
-        <p>God is known as <strong>Allah</strong>, the singular and all-powerful being beyond human comparison. In Islam, Allah is both just and merciful, and believers strive to live in submission to His divine will.</p>
-      </div>
-      <div class="religion">
-        <h3>Christianity</h3>
-        <p>Christians worship one God in the form of the <strong>Holy Trinity</strong>: the Father, the Son (Jesus Christ), and the Holy Spirit. Love and salvation are central to the Christian understanding of God.</p>
-      </div>
-      <div class="religion">
-        <h3>Buddhism</h3>
-        <p>Buddhism doesn't emphasize a creator god. Instead, it focuses on <strong>enlightenment</strong>, achieved through self-awareness, meditation, and ethical living. Some traditions revere celestial Buddhas and Bodhisattvas.</p>
-      </div>
-      <div class="religion">
-        <h3>Judaism</h3>
-        <p>God, or <strong>Yahweh</strong>, is the eternal, indivisible creator in Judaism. He is deeply involved in the affairs of the world and has a covenantal relationship with the Jewish people.</p>
-      </div>
-    </div>
-  </section>  <section id="texts" class="fade-in">
-    <div class="topic">
-      <h2>📚 2. Sacred Books & Texts</h2>
-      <div class="religion">
-        <h3>Islam</h3>
-        <p>The <strong>Quran</strong> is the central scripture, believed to be the literal word of God. It is written in classical Arabic and covers guidance on every aspect of life.</p>
-      </div>
-      <div class="religion">
-        <h3>Christianity</h3>
-        <p>The <strong>Bible</strong> is composed of the Old Testament and the New Testament, recording God's relationship with humanity and the teachings of Jesus Christ.</p>
-      </div>
-      <div class="religion">
-        <h3>Buddhism</h3>
-        <p>The Buddhist canon includes the <strong>Tripitaka</strong> (Three Baskets), Mahayana Sutras, and Tibetan texts. They contain teachings of the Buddha and commentary by monks over centuries.</p>
-      </div>
-      <div class="religion">
-        <h3>Judaism</h3>
-        <p>The <strong>Torah</strong> is the foundational text, followed by the <strong>Talmud</strong> and other writings. Together, they preserve laws, traditions, and centuries of rabbinic thought.</p>
-      </div>
-    </div>
-  </section>  <section id="practices" class="fade-in">
-    <div class="topic">
-      <h2>🛐 3. Practices & Rituals</h2>
-      <div class="religion">
-        <h3>Islam</h3>
-        <p>Muslims follow the <strong>Five Pillars</strong>: faith (shahada), prayer (salat), charity (zakat), fasting during Ramadan (sawm), and pilgrimage to Mecca (hajj). Daily life integrates constant remembrance of God.</p>
-      </div>
-      <div class="religion">
-        <h3>Christianity</h3>
-        <p>Worship includes prayer, Bible reading, sacraments like <strong>baptism</strong> and <strong>communion</strong>, and celebration of holy days like Easter and Christmas. Community and service are essential practices.</p>
-      </div>
-      <div class="religion">
-        <h3>Buddhism</h3>
-        <p>Key practices include <strong>meditation</strong>, chanting, ethical living, and monastic discipline. Festivals celebrate enlightenment, and offerings are made at temples to express devotion.</p>
-      </div>
-      <div class="religion">
-        <h3>Judaism</h3>
-        <p>Observing the <strong>Sabbath</strong>, keeping <strong>kosher</strong>, daily prayers, and following seasonal festivals like Passover are central. Life events are marked with deep-rooted ceremonies.</p>
-      </div>
-    </div>
-  </section>  <section id="forgiveness" class="fade-in">
-    <div class="topic">
-      <h2>❤️ 4. Forgiveness</h2>
-      <div class="religion">
-        <h3>Islam</h3>
-        <p>Forgiveness is a divine attribute of Allah. Muslims seek forgiveness through prayer, sincere repentance, and making amends. God’s mercy is emphasized repeatedly in the Quran.</p>
-      </div>
-      <div class="religion">
-        <h3>Christianity</h3>
-        <p>Forgiveness is at the heart of Christian faith. Jesus preached love for enemies and the power of divine grace. Confession and repentance open the path to salvation.</p>
-      </div>
-      <div class="religion">
-        <h3>Buddhism</h3>
-        <p>Forgiveness is essential for mental clarity and spiritual liberation. Buddhists forgive to free themselves from anger and karma, not necessarily as a divine transaction.</p>
-      </div>
-      <div class="religion">
-        <h3>Judaism</h3>
-        <p>Yom Kippur, the Day of Atonement, is dedicated to forgiveness. Jews must seek forgiveness from others before asking it from God, reflecting personal responsibility and community healing.</p>
-      </div>
-    </div>
-  </section>  <section id="roles" class="fade-in">
-    <div class="topic">
-      <h2>🏛️ 5. Role in Society & Culture</h2>
-      <p>Religions have deeply influenced global art, politics, ethics, and education. From towering cathedrals and grand mosques to philosophies of justice and charity, these spiritual systems continue to shape how societies understand morality, identity, and coexistence. They serve not only as private beliefs but as powerful social forces.</p>
-    </div>
-  </section>  <section id="learning" class="fade-in">
-    <div class="topic">
-      <h2>🎓 6. Learning Points</h2>
-      <ul>
-        <li>Religions, while diverse, often share core values like peace, love, and justice.</li>
-        <li>Understanding different faiths encourages empathy, coexistence, and appreciation for human complexity.</li>
-        <li>Texts and rituals serve as historical records and cultural blueprints.</li>
-        <li>Knowledge of world religions promotes global citizenship and intercultural respect.</li>
-      </ul>
+  </section>  <section id="islam">
+    <div class="card">
+      <h2>☪️ Islam</h2>
+      <h3>Concept of God</h3>
+      <p>Islam believes in one supreme God—<strong>Allah</strong>. He is merciful, all-powerful, and just. The core of Islam is submission to Allah’s will.</p><h3>Sacred Texts</h3>
+  <p>The <strong>Quran</strong> is the holy book of Islam, revealed in Arabic to the Prophet Muhammad over 23 years. It is considered the final revelation from God.</p>
+
+  <h3>Practices and Rituals</h3>
+  <p>Muslims follow the Five Pillars: faith, prayer five times a day, almsgiving, fasting during Ramadan, and pilgrimage to Mecca. Daily life is infused with religious awareness.</p>
+
+  <h3>Forgiveness</h3>
+  <p>Forgiveness is emphasized. Muslims seek forgiveness through prayer and good deeds. Allah is described as the Most Forgiving and Most Merciful.</p>
+
+  <h3>Roles in Society</h3>
+  <p>Islam shapes family values, community, laws, and ethics in many societies. Mosques are centers of worship, education, and charity.</p>
+
+  <h3>Learning Points</h3>
+  <ul>
+    <li>Faith is a way of life, not just belief.</li>
+    <li>Discipline and routine play key roles.</li>
+    <li>Community and unity are highly valued.</li>
+  </ul>
+  <img src="https://i.imgur.com/IT7f5Lw.jpeg" alt="Islamic Art">
+</div>
+
+  </section>  <section id="christianity">
+    <div class="card">
+      <h2>✝️ Christianity</h2>
+      <h3>Concept of God</h3>
+      <p>Christians believe in one God in three forms: Father, Son (Jesus Christ), and Holy Spirit. God is love, and Jesus came to save humanity.</p><h3>Sacred Texts</h3>
+  <p>The Bible, divided into Old and New Testaments, records the journey of God's people and the teachings of Jesus Christ.</p>
+
+  <h3>Practices and Rituals</h3>
+  <p>Prayer, church services, singing hymns, and sacraments like baptism and communion are vital. Christmas and Easter celebrate key events in Jesus’ life.</p>
+
+  <h3>Forgiveness</h3>
+  <p>Jesus taught unconditional forgiveness. Christians are taught to forgive others as God forgives them through grace.</p>
+
+  <h3>Roles in Society</h3>
+  <p>Christianity influences art, politics, and education. Churches support communities, help the poor, and guide moral decisions.</p>
+
+  <h3>Learning Points</h3>
+  <ul>
+    <li>Love and compassion are central themes.</li>
+    <li>Jesus' teachings promote peace and humility.</li>
+    <li>Faith brings people hope and guidance.</li>
+  </ul>
+  <img src="https://i.imgur.com/vM6szXh.jpeg" alt="Christian Church">
+</div>
+
+  </section>  <section id="buddhism">
+    <div class="card">
+      <h2>🪷 Buddhism</h2>
+      <h3>Concept of God</h3>
+      <p>Buddhism does not focus on a creator god. Instead, it teaches followers to reach enlightenment through mindfulness, ethics, and wisdom.</p><h3>Sacred Texts</h3>
+  <p>Texts like the Tripitaka and various sutras contain the teachings of Siddhartha Gautama, the Buddha, and guide practitioners in the Eightfold Path.</p>
+
+  <h3>Practices and Rituals</h3>
+  <p>Meditation, chanting, and observing precepts help individuals reduce suffering and reach nirvana. Temples and retreats are common for practice.</p>
+
+  <h3>Forgiveness</h3>
+  <p>Forgiveness is seen as a way to free the mind from hatred. Letting go is crucial for inner peace and karma cleansing.</p>
+
+  <h3>Roles in Society</h3>
+  <p>Buddhism influences architecture, art, and social harmony. Monks often act as spiritual guides and community helpers.</p>
+
+  <h3>Learning Points</h3>
+  <ul>
+    <li>Peace comes from within.</li>
+    <li>Letting go of attachment leads to happiness.</li>
+    <li>Life is about balance, not extremes.</li>
+  </ul>
+  <img src="https://i.imgur.com/TP3I2xO.jpeg" alt="Buddhist Temple">
+</div>
+
+  </section>  <section id="judaism">
+    <div class="card">
+      <h2>✡️ Judaism</h2>
+      <h3>Concept of God</h3>
+      <p>Jews believe in one eternal God—Yahweh—who is deeply involved in human history. God is righteous, just, and has a covenant with the Jewish people.</p><h3>Sacred Texts</h3>
+  <p>The Torah is the core text, followed by writings like the Talmud. These texts guide Jewish life, law, and ethics.</p>
+
+  <h3>Practices and Rituals</h3>
+  <p>Observing the Sabbath, kosher laws, bar/bat mitzvahs, and holidays like Hanukkah and Passover are key rituals in Jewish tradition.</p>
+
+  <h3>Forgiveness</h3>
+  <p>Forgiveness is taken seriously. Jews must ask and grant forgiveness before Yom Kippur. Atonement requires effort and sincerity.</p>
+
+  <h3>Roles in Society</h3>
+  <p>Judaism has influenced law, philosophy, and ethics. Jewish communities emphasize education, charity, and remembrance.</p>
+
+  <h3>Learning Points</h3>
+  <ul>
+    <li>History and identity are central.</li>
+    <li>Law and tradition shape everyday life.</li>
+    <li>Remembrance and resilience define the Jewish spirit.</li>
+  </ul>
+  <img src="https://i.imgur.com/PHcDeRi.jpeg" alt="Jewish Synagogue">
+</div>
+
+  </section>  <section id="conclusion">
+    <div class="card">
+      <h2>🎓 Final Thoughts</h2>
+      <p>Each religion offers unique insights, yet shares values like compassion, justice, and community. Exploring different beliefs deepens our understanding of humanity and promotes peace. Diversity in faith is not a barrier but a bridge to unity and respect.</p>
     </div>
   </section></body>
-        </html>
+      </html>
